@@ -5,6 +5,7 @@ import com.alibaba.fastjson2.JSON;
 import java.util.ArrayList;
 import java.util.List;
 
+//合并区间
 public class Merge {
 
     public static void main(String[] args) {
@@ -18,6 +19,10 @@ public class Merge {
         System.out.println(JSON.toJSONString(merge(intervals)));
     }
 
+    /**
+     * 以数组 intervals 表示若干个区间的集合，其中单个区间为 intervals[i] = [start-i, end-i] 。
+     * 请你合并所有重叠的区间，并返回一个不重叠的区间数组，该数组需恰好覆盖输入中的所有区间。
+     */
     public static int[][] merge(int[][] intervals) {
         // 转成list结构，避免每次数组拷贝
         List<int[]> list = new ArrayList<>();
